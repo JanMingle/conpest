@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ConPest Solution</title>
+<link rel="stylesheet" href="styles.css">
+<!-- Import Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- Sticky Header -->
+<header class="header">
+    <div class="logo-container">
+        <img src="img/logo.jpg" alt="Logo" class="logo">
+    </div>
+    <div class="contact-info">
+        <span class="phone">+2779 128 1876</span>
+        <span class="email">Conrad@gmail.com</span>
+        <a href="https://facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/27791281876" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home-section">Home</a></li>
+            <li><a href="#about-section">About Us</a></li>
+            <li><a href="#services-section">Services</a></li>
+            <li><a href="#contact-section">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="home-section" id="home-section">
+    <h1 id="animated-heading">NEED A PEST CONTROL EXPERT IN YOUR AREA?</h1>
+    <div class="image-slider">
+        <img src="img/Cockroach.png" alt="Pest Control Image 1" class="slide active">
+        <img src="img/Fly.png" alt="Pest Control Image 2" class="slide">
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let slides = document.querySelectorAll('.slide');
+        let index = 0;
+
+        setInterval(() => {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length; // Move to the next image or loop back to the first
+            slides[index].classList.add('active');
+        }, 10000); // Change every 10000 milliseconds (10 seconds)
+    });
+  </script>
+  <!-- About Us Section with Purple Background -->
+<section class="about-section" id="about-section">
+    <!-- Right-Aligned "About Us" Heading with Large Font -->
+    <div class="about-container">
+        <h1 class="animated-heading"><i class="fas fa-info-circle"></i> About Us</h1>
+        <p class="about-description">We specialise in the treatment of houses, offices, shops, and factories. Our main pests are black ants, fishmoths, cockroaches, bed bugs, fleas, rats, and mice. We are an established pest control company and provide obligation-free quotations to our customers who need to deal with a pest infestation.</p>
+    </div>
+
+    <!-- Left-Aligned "Mission" Heading -->
+    <div class="mission-container">
+        <h2 class="animated-heading"><i class="fas fa-bullseye"></i> Mission</h2>
+        <p class="mission-description">
+            "To be totally committed to service excellence and customer satisfaction in all aspects of our business." <br>
+            "To conduct our business with integrity and the highest sense of ethics." <br>
+            "To at all times respect and uphold the dignity of our clients and fellow staff members."
+        </p>
+    </div>
+
+    <!-- Center-Aligned "Core Values" Heading -->
+    <div class="values-container">
+        <h2 class="animated-heading"><i class="fas fa-heart"></i> Core Values</h2>
+        <p class="values-description">
+            - To at all times respect and uphold the dignity of people <br>
+            - To conduct business with the highest sense of ethics <br>
+            - To strive to achieve "service excellence" in our business
+        </p>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll('.animated-heading').forEach(heading => {
+        heading.addEventListener('mouseover', () => {
+            heading.style.color = '#f39c12'; // Orange color on hover
+        });
+        heading.addEventListener('mouseleave', () => {
+            heading.style.color = ''; // Reset color
+        });
+    });
+</script>
+<!-- Services Section -->
+<section class="services-section" id="services-section">
+    <h1 class="blinking-heading">Our Services</h1>
+    <div class="services-grid">
+        <!-- Images with headings (2x4 grid) -->
+        <div class="service-item">
+            <img src="img/rat.jpg" alt="Rat & Mice Treatment">
+            <h3>Rat & Mice Treatment</h3>
+        </div>
+        <div class="service-item">
+            <img src="img/cockroach.jpg" alt="Cockroach Treatment">
+            <h3>Cockroach Treatment</h3>
+        </div>
+        <div class="service-item">
+            <img src="img/black-ants.jpg" alt="Ants">
+            <h3>Ants</h3>
+        </div>
+        <div class="service-item">
+            <img src="img/termite2.jpg" alt="Termites">
+            <h3>Termites</h3>
+        </div>
+        <div class="service-item">
+            <img src="img/Harvester-Termites-2-Flick-Pest-Control-400x400.png" alt="Harvester Termites">
+            <h3>Harvester Termites</h3>
+        </div>
+        <div class="service-item">
+            <img src="img/fly.jpg" alt="Flies">
+            <h3>Flies</h3>
+        </div>
+        <div class="service-item">
+            <img src="img/rain-spider.jpg" alt="Spider Treatment">
+            <h3>Spider Treatment</h3>
+        </div>
+        <div class="service-item">
+            <img src="img/bee.jpg" alt="Bees">
+            <h3>Bees</h3>
+        </div>
+    </div>
+    
+    <!-- Services We Offer -->
+    <h2>SERVICES WE OFFER</h2>
+    <p>
+        <span class="service"><i class="fas fa-rat"></i> Rat & Mice Treatment</span> <br>
+        <span class="service"><i class="fas fa-bug"></i> Cockroach Treatment</span> <br>
+        <span class="service"><i class="fas fa-fish"></i> Fish Moth Treatment</span> <br>
+        <span class="service"><i class="fas fa-home"></i> Household Pest Control</span> <br>
+        <span class="service"><i class="fas fa-industry"></i> Industrial Pest Control</span> <br>
+        <span class="service"><i class="fas fa-bug"></i> Ant Treatment</span> <br>
+        <span class="service"><i class="fas fa-spider"></i> Spider Treatment</span> <br>
+        <span class="service"><i class="fas fa-bed"></i> Bedbug Treatment</span> <br>
+        <span class="service"><i class="fas fa-wasp"></i> Wasp Treatment</span> <br>
+        <span class="service"><i class="fas fa-termites"></i> Termite Treatment</span> <br>
+        <span class="service"><i class="fas fa-cricket"></i> Crickets Treatment</span>
+    </p>
+</section>
+
+<script>
+    // JavaScript for hover effect on service names
+    document.querySelectorAll('.service').forEach(service => {
+        service.addEventListener('mouseover', () => {
+            service.style.color = '#f39c12'; // Change to orange on hover
+        });
+        service.addEventListener('mouseleave', () => {
+            service.style.color = ''; // Reset color
+        });
+    });
+</script>
+<!-- Contact Us Section -->
+<section class="contact-section" id="contact-section">
+    <div class="contact-details animate__animated animate__fadeInRight">
+        <h1 class="contact-title">Contact Us</h1>
+        <p><strong>Phone:</strong> +27791281876</p>
+        <p><strong>Email:</strong> conrad@gmail.com</p>
+
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="mailto:conrad@gmail.com" class="social-icon" title="Send an Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/27791281876" class="social-icon" title="WhatsApp Us"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form animate__animated animate__fadeInLeft">
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="full-name">Full Names:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Your full names" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+            </div>
+            <div class="form-group">
+                <label for="contact-number">Contact Number:</label>
+                <input type="tel" id="contact-number" name="contact-number" placeholder="Your contact number" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- JavaScript for form submission -->
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form from submitting the default way
+    alert("Form submitted! This requires server-side handling to send an email."); 
+});
+</script>
+<!-- Footer Section -->
+<footer class="footer">
+    <p>2024 ConPest Pest Control. All rights reserved. Designed by JanMingle.</p>
+</footer>
+</body>
+</html>

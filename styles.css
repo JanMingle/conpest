@@ -1,0 +1,353 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #0c0c0c; /* Dark background for contrast */
+    padding: 10px 20px;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.logo {
+    height: 100px; /* Increased height */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Spacing between items */
+}
+
+.phone, .email {
+    color: #FFDD55; /* Bright yellow for better visibility */
+    font-size: 14px;
+    font-weight: bold; /* Make text bold */
+}
+
+.social-icon {
+    color: #FFF; /* Bright color for icons */
+    font-size: 16px; /* Adjust size as needed */
+}
+
+.social-icon:hover {
+    color: #007BFF; /* Bright blue on hover */
+}
+
+.navbar {
+    flex: 3;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #eb1010; /* Already bright red */
+    font-size: 18px;
+    font-weight: bold; /* Make text bold */
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Blue on hover for contrast */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .contact-info {
+        margin-bottom: 10px; /* Space between contact info and nav links */
+    }
+}
+.home-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style for the animated heading */
+#animated-heading {
+    font-size: 50px; /* Increase font size */
+    font-weight: bold; /* Make font bold */
+    color: #d35400; /* Optional: Change color to make it more vibrant */
+    text-align: center; /* Center-align the heading */
+    margin: 20px 0; /* Add some space around the heading */
+    animation: colorChange 3s infinite; /* Example animation */
+}
+
+/* Simple color-changing animation */
+@keyframes colorChange {
+    0%, 100% {
+        color: #d35400;
+    }
+    50% {
+        color: #2980b9;
+    }
+}
+@media (max-width: 768px) {
+    #animated-heading {
+        font-size: 24px; /* Smaller font size on mobile devices */
+    }
+}
+
+
+.image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust based on your layout */
+    margin: 20px auto;
+    overflow: hidden;
+    height: 300px; /* Ensure there is a height set */
+}
+
+.slide {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Start outside the view */
+    opacity: 0;
+    transition: all 1s ease;
+    height: 100%; /* Full height of the container */
+}
+
+.active {
+    left: 0; /* Bring into view */
+    opacity: 1;
+}
+.about-section {
+    background-color: purple; /* Purple background */
+    color: white; /* White text for contrast */
+    padding: 20px; /* Space inside the section */
+}
+
+.about-container {
+    text-align: right; /* Align text to the right */
+}
+
+.mission-container {
+    text-align: left; /* Align text to the left */
+    margin-top: 20px; /* Space between sections */
+}
+
+.values-container {
+    text-align: center; /* Align text to the center */
+    margin-top: 20px; /* Space between sections */
+}
+
+.animated-heading {
+    font-size: 24px; /* Large headings */
+    font-weight: bold; /* Bold font */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.about-description, .mission-description, .values-description {
+    font-size: 16px; /* Regular text size */
+    line-height: 1.5; /* Increased line height for readability */
+}
+.services-section {
+    background-color: orange; /* Orange background */
+    color: black; /* Black text for contrast */
+    padding: 20px; /* Space inside the section */
+}
+
+.blinking-heading {
+    font-size: 36px; /* Large font */
+    font-weight: bold; /* Bold font */
+    animation: blink 1s infinite; /* Blinking effect */
+}
+
+.services-grid {
+    display: grid; /* Using grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    gap: 20px; /* Space between items */
+}
+
+.service-item {
+    text-align: center; /* Center-align text */
+}
+
+.service-item img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.service {
+    font-size: 20px; /* Increase font size */
+    line-height: 1.5; /* Add spacing between lines */
+    font-weight: bold; /* Bold font */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+}
+
+@keyframes blink {
+    0% { color: #333; }
+    50% { color: red; }
+    100% { color: #333; }
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+/* Contact Us Section */
+.contact-section {
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.contact-details {
+    text-align: right;
+}
+
+.contact-title {
+    font-size: 36px;
+    font-weight: bold;
+    animation: colorChange 2s infinite;
+}
+
+@keyframes colorChange {
+    0% { color: black; }
+    50% { color: orange; }
+    100% { color: black; }
+}
+
+.contact-details p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #333;
+}
+
+.social-icon:hover {
+    color: orange;
+}
+
+.contact-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: orange;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-details,
+    .contact-form {
+        text-align: center;
+    }
+
+    .contact-form {
+        margin-top: 20px;
+    }
+
+    .contact-title {
+        font-size: 28px;
+    }
+}
+.footer {
+    background-color: #333; /* Dark background color */
+    color: white; /* Text color for contrast */
+    text-align: center; /* Center-align the text */
+    padding: 15px; /* Padding for spacing */
+    position: relative; /* To maintain footer at the bottom */
+    bottom: 0; /* Footer stays at the bottom of the viewport */
+    width: 100%; /* Full width for the footer */
+    font-size: 14px; /* Font size */
+}
+
+.footer p {
+    margin: 0; /* No margin for text */
+}
